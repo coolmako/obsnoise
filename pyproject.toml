@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coolmako-obsnoise"
+version = "0.1.0"
+description = "识别工具返回中的超时回退、空结果与错误混入，标出噪声比例"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "coolmako" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://coolmako.github.io"
+Repository = "https://github.com/coolmako/obsnoise"
+Issues = "https://github.com/coolmako/obsnoise/issues"
+
+[project.scripts]
+obsnoise = "obsnoise:main"
+
+[tool.setuptools]
+py-modules = ["obsnoise"]
